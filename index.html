@@ -1,0 +1,1739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DESSANGE Paris 6 — Saint-Germain-des-Prés</title>
+
+<meta name="description"
+content="DESSANGE Saint-Germain-des-Prés Paris 6 — Coiffeur, Coloriste & SPA. Luxury Parisian hair and beauty experience.">
+
+<style>
+
+/* =========================================================
+   DESSANGE PARIS 6
+   PREMIUM SINGLE PAGE WEBSITE
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root{
+    --black:#0c0c0b;
+    --dark:#141412;
+    --cream:#f4f0e8;
+    --white:#fffdf8;
+    --gold:#c9a66b;
+    --gold-light:#e0c58f;
+    --muted:#aaa49a;
+    --line:rgba(201,166,107,.25);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--black);
+    color:var(--white);
+    font-family:Inter,Arial,sans-serif;
+    overflow-x:hidden;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button{
+    font-family:inherit;
+}
+
+/* ================= CURSOR ================= */
+
+.cursor{
+    position:fixed;
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:var(--gold);
+    pointer-events:none;
+    z-index:9999;
+    transform:translate(-50%,-50%);
+    transition:.08s linear;
+}
+
+.cursor-ring{
+    position:fixed;
+    width:38px;
+    height:38px;
+    border:1px solid rgba(201,166,107,.7);
+    border-radius:50%;
+    pointer-events:none;
+    z-index:9998;
+    transform:translate(-50%,-50%);
+}
+
+/* ================= NAV ================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    padding:20px 5%;
+    transition:.4s;
+}
+
+header.scrolled{
+    background:rgba(10,10,9,.94);
+    backdrop-filter:blur(15px);
+    padding:13px 5%;
+    border-bottom:1px solid var(--line);
+}
+
+.nav{
+    max-width:1400px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-family:"Cormorant Garamond",serif;
+    font-size:27px;
+    letter-spacing:5px;
+    color:#fff;
+}
+
+.logo span{
+    display:block;
+    font-family:Inter,sans-serif;
+    font-size:8px;
+    letter-spacing:4px;
+    color:var(--gold);
+    text-align:center;
+    margin-top:-3px;
+}
+
+.nav-links{
+    display:flex;
+    gap:32px;
+    align-items:center;
+}
+
+.nav-links a{
+    font-size:11px;
+    letter-spacing:1.8px;
+    text-transform:uppercase;
+    color:#ddd;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:var(--gold);
+}
+
+.nav-btn{
+    border:1px solid var(--gold);
+    padding:12px 20px;
+    color:var(--gold)!important;
+}
+
+.nav-btn:hover{
+    background:var(--gold);
+    color:#000!important;
+}
+
+.menu{
+    display:none;
+    font-size:26px;
+    cursor:pointer;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    background:
+    linear-gradient(90deg,
+    rgba(8,8,7,.94) 0%,
+    rgba(8,8,7,.72) 43%,
+    rgba(8,8,7,.28) 100%),
+    url("https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=2000&q=85")
+    center/cover;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(0deg,#0c0c0b 0%,transparent 30%);
+    pointer-events:none;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    width:min(1400px,90%);
+    margin:auto;
+    padding-top:80px;
+}
+
+.eyebrow{
+    color:var(--gold);
+    font-size:11px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-family:"Cormorant Garamond",serif;
+    font-size:clamp(65px,9vw,145px);
+    line-height:.78;
+    font-weight:500;
+    max-width:900px;
+    letter-spacing:-3px;
+}
+
+.hero h1 em{
+    color:var(--gold);
+    font-style:normal;
+}
+
+.hero-sub{
+    margin-top:35px;
+    max-width:540px;
+    color:#d2cec6;
+    font-size:15px;
+    line-height:1.9;
+    font-weight:300;
+}
+
+.hero-actions{
+    display:flex;
+    gap:15px;
+    margin-top:35px;
+}
+
+.btn{
+    padding:16px 28px;
+    border:1px solid var(--gold);
+    background:var(--gold);
+    color:#111;
+    font-size:11px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:transparent;
+    color:var(--gold);
+}
+
+.btn-outline{
+    background:transparent;
+    color:#fff;
+}
+
+.btn-outline:hover{
+    background:#fff;
+    color:#111;
+    border-color:#fff;
+}
+
+.hero-location{
+    position:absolute;
+    bottom:35px;
+    right:5%;
+    z-index:3;
+    color:#ddd;
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+/* ================= SECTIONS ================= */
+
+section{
+    padding:110px 5%;
+}
+
+.container{
+    width:min(1250px,100%);
+    margin:auto;
+}
+
+.section-head{
+    margin-bottom:55px;
+}
+
+.section-number{
+    color:var(--gold);
+    font-size:10px;
+    letter-spacing:3px;
+    margin-bottom:13px;
+}
+
+.section-title{
+    font-family:"Cormorant Garamond",serif;
+    font-size:clamp(42px,6vw,78px);
+    line-height:.95;
+    font-weight:500;
+}
+
+.section-title span{
+    color:var(--gold);
+}
+
+.section-description{
+    color:#a9a59c;
+    max-width:600px;
+    line-height:1.8;
+    margin-top:18px;
+}
+
+/* ================= INTRO ================= */
+
+.intro{
+    background:var(--cream);
+    color:#161614;
+}
+
+.intro-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+}
+
+.intro .section-number{
+    color:#9b7538;
+}
+
+.intro .section-description{
+    color:#605d57;
+}
+
+.intro-text{
+    font-family:"Cormorant Garamond",serif;
+    font-size:31px;
+    line-height:1.35;
+}
+
+.intro-image{
+    height:600px;
+    overflow:hidden;
+}
+
+.intro-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:1s;
+}
+
+.intro-image:hover img{
+    transform:scale(1.04);
+}
+
+/* ================= SERVICES ================= */
+
+.services{
+    background:#10100f;
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    border-top:1px solid var(--line);
+}
+
+.service{
+    padding:35px 28px 40px 0;
+    border-bottom:1px solid var(--line);
+    border-right:1px solid var(--line);
+    transition:.35s;
+}
+
+.service:nth-child(3n){
+    border-right:0;
+    padding-left:28px;
+}
+
+.service:nth-child(3n+2){
+    padding-left:28px;
+}
+
+.service:hover{
+    transform:translateY(-5px);
+}
+
+.service-icon{
+    font-size:28px;
+    margin-bottom:25px;
+}
+
+.service h3{
+    font-family:"Cormorant Garamond",serif;
+    font-size:31px;
+    font-weight:500;
+    margin-bottom:13px;
+}
+
+.service p{
+    color:#96928a;
+    font-size:13px;
+    line-height:1.8;
+    max-width:330px;
+}
+
+.service-price{
+    color:var(--gold);
+    margin-top:20px;
+    font-size:11px;
+    letter-spacing:2px;
+}
+
+/* ================= FEATURE ================= */
+
+.feature{
+    min-height:650px;
+    position:relative;
+    display:flex;
+    align-items:center;
+    background:
+    linear-gradient(90deg,rgba(8,8,7,.88),rgba(8,8,7,.25)),
+    url("https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+}
+
+.feature-content{
+    max-width:650px;
+}
+
+.feature h2{
+    font-family:"Cormorant Garamond",serif;
+    font-size:clamp(50px,7vw,90px);
+    font-weight:500;
+    line-height:.9;
+}
+
+.feature p{
+    margin-top:25px;
+    color:#d0cbc1;
+    line-height:1.8;
+    max-width:520px;
+}
+
+/* ================= SPA ================= */
+
+.spa{
+    background:var(--cream);
+    color:#161614;
+}
+
+.spa-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:80px;
+    align-items:center;
+}
+
+.spa .section-number{
+    color:#9b7538;
+}
+
+.spa .section-description{
+    color:#666158;
+}
+
+.spa-image{
+    height:650px;
+    overflow:hidden;
+}
+
+.spa-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.spa-list{
+    margin-top:35px;
+    border-top:1px solid #cfc7b8;
+}
+
+.spa-item{
+    padding:18px 0;
+    border-bottom:1px solid #cfc7b8;
+    display:flex;
+    justify-content:space-between;
+    font-family:"Cormorant Garamond",serif;
+    font-size:23px;
+}
+
+.spa-item span{
+    font-family:Inter,sans-serif;
+    color:#8b6a36;
+    font-size:12px;
+}
+
+/* ================= EXPERIENCE ================= */
+
+.experience{
+    text-align:center;
+    background:#0c0c0b;
+}
+
+.experience .section-description{
+    margin:20px auto;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    margin-top:65px;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+}
+
+.stat{
+    padding:40px 15px;
+    border-right:1px solid var(--line);
+}
+
+.stat:last-child{
+    border:0;
+}
+
+.stat strong{
+    display:block;
+    font-family:"Cormorant Garamond",serif;
+    font-size:55px;
+    color:var(--gold);
+    font-weight:500;
+}
+
+.stat span{
+    color:#aaa59a;
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+/* ================= ACCESSIBILITY ================= */
+
+.access{
+    background:#151513;
+}
+
+.access-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+}
+
+.access-list{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+
+.access-card{
+    border:1px solid #302f2b;
+    padding:23px;
+    transition:.3s;
+}
+
+.access-card:hover{
+    border-color:var(--gold);
+}
+
+.access-card b{
+    display:block;
+    margin-bottom:7px;
+    font-size:13px;
+}
+
+.access-card span{
+    color:#97938a;
+    font-size:11px;
+    line-height:1.5;
+}
+
+/* ================= BOOKING ================= */
+
+.booking{
+    background:
+    linear-gradient(rgba(8,8,7,.86),rgba(8,8,7,.94)),
+    url("https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=1800&q=80")
+    center/cover;
+}
+
+.booking-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:80px;
+    align-items:center;
+}
+
+.booking-text h2{
+    font-family:"Cormorant Garamond",serif;
+    font-size:75px;
+    line-height:.9;
+    font-weight:500;
+}
+
+.booking-text p{
+    color:#aaa59a;
+    margin-top:20px;
+    line-height:1.8;
+}
+
+.form{
+    background:rgba(20,20,18,.8);
+    border:1px solid var(--line);
+    padding:40px;
+    backdrop-filter:blur(10px);
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.input{
+    width:100%;
+    padding:16px;
+    background:#0c0c0b;
+    border:1px solid #35332f;
+    color:white;
+    outline:none;
+    font-family:Inter,sans-serif;
+}
+
+.input:focus{
+    border-color:var(--gold);
+}
+
+textarea.input{
+    min-height:120px;
+    resize:vertical;
+}
+
+.full{
+    grid-column:1/-1;
+}
+
+.form button{
+    width:100%;
+    margin-top:15px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+    background:var(--cream);
+    color:#161614;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+}
+
+.contact .section-number{
+    color:#9b7538;
+}
+
+.contact .section-description{
+    color:#666158;
+}
+
+.contact-info{
+    margin-top:35px;
+}
+
+.contact-line{
+    padding:18px 0;
+    border-bottom:1px solid #d1c9ba;
+}
+
+.contact-line small{
+    display:block;
+    color:#8b6a36;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:9px;
+    margin-bottom:5px;
+}
+
+.contact-line a,
+.contact-line div{
+    font-family:"Cormorant Garamond",serif;
+    font-size:24px;
+}
+
+.map{
+    min-height:480px;
+    background:#d9d2c4;
+    position:relative;
+    overflow:hidden;
+}
+
+.map::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+    linear-gradient(45deg,transparent 47%,rgba(80,70,60,.12) 48%,transparent 49%),
+    linear-gradient(-45deg,transparent 47%,rgba(80,70,60,.12) 48%,transparent 49%);
+    background-size:80px 80px;
+}
+
+.map-pin{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+}
+
+.pin{
+    width:60px;
+    height:60px;
+    border-radius:50% 50% 50% 0;
+    background:#161614;
+    transform:rotate(-45deg);
+    margin:auto;
+}
+
+.pin::after{
+    content:"";
+    width:20px;
+    height:20px;
+    background:var(--gold);
+    border-radius:50%;
+    position:absolute;
+    top:20px;
+    left:20px;
+}
+
+.map-label{
+    margin-top:25px;
+    background:#161614;
+    color:#fff;
+    padding:13px 20px;
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#080807;
+    padding:70px 5% 30px;
+}
+
+.footer-grid{
+    width:min(1250px,100%);
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr;
+    gap:60px;
+    padding-bottom:55px;
+    border-bottom:1px solid #272621;
+}
+
+.footer-logo{
+    font-family:"Cormorant Garamond",serif;
+    font-size:45px;
+    letter-spacing:5px;
+}
+
+.footer-about{
+    color:#88847b;
+    max-width:380px;
+    line-height:1.8;
+    margin-top:15px;
+    font-size:12px;
+}
+
+.footer-col h4{
+    color:var(--gold);
+    font-size:10px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:20px;
+}
+
+.footer-col a{
+    display:block;
+    color:#aaa69e;
+    margin-bottom:11px;
+    font-size:12px;
+}
+
+.footer-bottom{
+    width:min(1250px,100%);
+    margin:auto;
+    padding-top:25px;
+    display:flex;
+    justify-content:space-between;
+    color:#66635c;
+    font-size:9px;
+    letter-spacing:1px;
+}
+
+/* ================= REVEAL ================= */
+
+.reveal{
+    opacity:0;
+    transform:translateY(35px);
+    transition:1s ease;
+}
+
+.reveal.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+    .nav-links{
+        position:fixed;
+        top:0;
+        right:-100%;
+        width:280px;
+        height:100vh;
+        background:#11110f;
+        flex-direction:column;
+        align-items:flex-start;
+        padding:100px 35px;
+        transition:.4s;
+    }
+
+    .nav-links.active{
+        right:0;
+    }
+
+    .menu{
+        display:block;
+        color:white;
+    }
+
+    .nav-btn{
+        border:0;
+        padding:0;
+    }
+
+    .hero h1{
+        font-size:75px;
+    }
+
+    .intro-grid,
+    .spa-grid,
+    .booking-grid,
+    .contact-grid,
+    .access-grid{
+        grid-template-columns:1fr;
+    }
+
+    .services-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .service:nth-child(3n){
+        padding-left:0;
+        border-right:1px solid var(--line);
+    }
+
+    .service:nth-child(3n+2){
+        padding-left:28px;
+    }
+
+    .service:nth-child(even){
+        border-right:0;
+    }
+
+    .stats{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .stat:nth-child(2){
+        border-right:0;
+    }
+
+    .stat:nth-child(-n+2){
+        border-bottom:1px solid var(--line);
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .footer-grid > div:first-child{
+        grid-column:1/-1;
+    }
+}
+
+@media(max-width:600px){
+
+    section{
+        padding:80px 6%;
+    }
+
+    .cursor,
+    .cursor-ring{
+        display:none;
+    }
+
+    .hero{
+        min-height:850px;
+    }
+
+    .hero h1{
+        font-size:60px;
+        letter-spacing:-1px;
+    }
+
+    .hero-sub{
+        font-size:13px;
+    }
+
+    .hero-actions{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .intro-image,
+    .spa-image{
+        height:450px;
+    }
+
+    .services-grid{
+        grid-template-columns:1fr;
+    }
+
+    .service,
+    .service:nth-child(3n),
+    .service:nth-child(3n+2){
+        padding:30px 0;
+        border-right:0;
+    }
+
+    .access-list{
+        grid-template-columns:1fr;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .full{
+        grid-column:auto;
+    }
+
+    .form{
+        padding:25px;
+    }
+
+    .booking-text h2{
+        font-size:58px;
+    }
+
+    .stats{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .stat strong{
+        font-size:40px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid > div:first-child{
+        grid-column:auto;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+        gap:10px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="cursor"></div>
+<div class="cursor-ring"></div>
+
+<!-- ================= NAVIGATION ================= -->
+
+<header id="header">
+
+<nav class="nav">
+
+<a href="#" class="logo">
+DESSANGE
+<span>PARIS 6</span>
+</a>
+
+<div class="nav-links" id="navLinks">
+<a href="#salon">Salon</a>
+<a href="#services">Services</a>
+<a href="#spa">SPA</a>
+<a href="#experience">Experience</a>
+<a href="#contact">Contact</a>
+<a href="#booking" class="nav-btn">Book Appointment</a>
+</div>
+
+<div class="menu" id="menu">☰</div>
+
+</nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-content reveal">
+
+<div class="eyebrow">
+Saint-Germain-des-Prés · Paris 6
+</div>
+
+<h1>
+The Art of<br>
+<em>French</em><br>
+Beauty.
+</h1>
+
+<p class="hero-sub">
+A Parisian destination for exceptional hair, sophisticated colour
+and restorative beauty rituals — where French elegance becomes personal.
+</p>
+
+<div class="hero-actions">
+
+<a href="#booking" class="btn">
+Book an appointment
+</a>
+
+<a href="#services" class="btn btn-outline">
+Discover our services
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-location">
+15 Rue des Saints-Pères · 75006 Paris
+</div>
+
+</section>
+
+
+<!-- ================= INTRO ================= -->
+
+<section class="intro" id="salon">
+
+<div class="container intro-grid">
+
+<div class="reveal">
+
+<div class="section-number">01 — THE HOUSE</div>
+
+<h2 class="section-title">
+Parisian<br>
+<span>Elegance.</span>
+</h2>
+
+<p class="section-description">
+Located in the heart of Saint-Germain-des-Prés,
+our salon brings together the heritage of French
+hairdressing with contemporary beauty rituals.
+</p>
+
+<p class="intro-text">
+“Beauty is not simply a look.
+It is an attitude, a gesture,
+a moment entirely your own.”
+</p>
+
+</div>
+
+<div class="intro-image reveal">
+
+<img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1200&q=85">
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="services" id="services">
+
+<div class="container">
+
+<div class="section-head reveal">
+
+<div class="section-number">02 — EXPERTISE</div>
+
+<h2 class="section-title">
+Signature <span>Services</span>
+</h2>
+
+<p class="section-description">
+From precision cuts to bespoke colour,
+every service is designed around your individuality.
+</p>
+
+</div>
+
+<div class="services-grid">
+
+<div class="service reveal">
+<div class="service-icon">✂</div>
+<h3>Haircut & Styling</h3>
+<p>
+Precision French cutting, personalised styling
+and finishing designed to complement your features.
+</p>
+<div class="service-price">FROM €70</div>
+</div>
+
+<div class="service reveal">
+<div class="service-icon">◌</div>
+<h3>Colour</h3>
+<p>
+Expert colour consultation, highlights,
+balayage and sophisticated French colour techniques.
+</p>
+<div class="service-price">FROM €90</div>
+</div>
+
+<div class="service reveal">
+<div class="service-icon">✦</div>
+<h3>Balayage</h3>
+<p>
+Natural dimension and luminous tones
+crafted specifically for your complexion.
+</p>
+<div class="service-price">FROM €150</div>
+</div>
+
+<div class="service reveal">
+<div class="service-icon">♢</div>
+<h3>Hair Care</h3>
+<p>
+Luxury treatments designed to restore,
+strengthen and transform the condition of your hair.
+</p>
+<div class="service-price">FROM €45</div>
+</div>
+
+<div class="service reveal">
+<div class="service-icon">◎</div>
+<h3>Bridal Beauty</h3>
+<p>
+Elegant bridal styling and personalised preparation
+for unforgettable Parisian occasions.
+</p>
+<div class="service-price">ON CONSULTATION</div>
+</div>
+
+<div class="service reveal">
+<div class="service-icon">♡</div>
+<h3>Beauty Rituals</h3>
+<p>
+A curated selection of beauty experiences
+designed to make you feel completely renewed.
+</p>
+<div class="service-price">FROM €60</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FEATURE ================= -->
+
+<section class="feature">
+
+<div class="container">
+
+<div class="feature-content reveal">
+
+<div class="eyebrow">The DESSANGE Philosophy</div>
+
+<h2>
+Your hair.<br>
+Your signature.
+</h2>
+
+<p>
+Our approach combines technical mastery,
+personal consultation and timeless French style.
+The result is never a trend copied from elsewhere —
+it is a look created for you.
+</p>
+
+<a href="#booking" class="btn" style="display:inline-block;margin-top:28px;">
+Meet our team
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= SPA ================= -->
+
+<section class="spa" id="spa">
+
+<div class="container spa-grid">
+
+<div class="spa-image reveal">
+
+<img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=85">
+
+</div>
+
+<div class="reveal">
+
+<div class="section-number">03 — SPA & WELLNESS</div>
+
+<h2 class="section-title">
+A Moment<br>
+<span>For You.</span>
+</h2>
+
+<p class="section-description">
+Slow down. Disconnect. Rediscover the pleasure
+of being taken care of.
+</p>
+
+<div class="spa-list">
+
+<div class="spa-item">
+Hair Ritual <span>€60+</span>
+</div>
+
+<div class="spa-item">
+Relaxation Treatment <span>€80+</span>
+</div>
+
+<div class="spa-item">
+Luxury Beauty Ritual <span>€110+</span>
+</div>
+
+<div class="spa-item">
+Personalised Experience <span>ON REQUEST</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= EXPERIENCE ================= -->
+
+<section class="experience" id="experience">
+
+<div class="container">
+
+<div class="section-head reveal">
+
+<div class="section-number">04 — THE EXPERIENCE</div>
+
+<h2 class="section-title">
+More Than A <span>Salon.</span>
+</h2>
+
+<p class="section-description">
+Every detail is considered — from your first consultation
+to the final mirror moment.
+</p>
+
+</div>
+
+<div class="stats">
+
+<div class="stat reveal">
+<strong>01</strong>
+<span>Personal Consultation</span>
+</div>
+
+<div class="stat reveal">
+<strong>02</strong>
+<span>Expert Technique</span>
+</div>
+
+<div class="stat reveal">
+<strong>03</strong>
+<span>Luxury Ritual</span>
+</div>
+
+<div class="stat reveal">
+<strong>04</strong>
+<span>Signature Finish</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= ACCESSIBILITY ================= -->
+
+<section class="access">
+
+<div class="container access-grid">
+
+<div class="reveal">
+
+<div class="section-number">05 — WELCOMING EVERYONE</div>
+
+<h2 class="section-title">
+Beauty For<br>
+<span>Everyone.</span>
+</h2>
+
+<p class="section-description">
+Our salon is designed to offer a welcoming,
+comfortable and inclusive environment.
+</p>
+
+</div>
+
+<div class="access-list reveal">
+
+<div class="access-card">
+<b>♿ Accessible Entrance</b>
+<span>Wheelchair-accessible entrance.</span>
+</div>
+
+<div class="access-card">
+<b>♿ Accessible Seating</b>
+<span>Wheelchair-accessible seating available.</span>
+</div>
+
+<div class="access-card">
+<b>🚗 Accessible Parking</b>
+<span>Wheelchair-accessible car park.</span>
+</div>
+
+<div class="access-card">
+<b>🚻 Accessible Toilet</b>
+<span>Wheelchair-accessible toilet.</span>
+</div>
+
+<div class="access-card">
+<b>♡ Inclusive Space</b>
+<span>LGBTQ+ friendly and transgender safe space.</span>
+</div>
+
+<div class="access-card">
+<b>◎ Gender-Neutral Toilets</b>
+<span>Gender-neutral restroom facilities.</span>
+</div>
+
+<div class="access-card">
+<b>☕ Refreshments</b>
+<span>Beverages available for guests.</span>
+</div>
+
+<div class="access-card">
+<b>Wi-Fi</b>
+<span>Complimentary Wi-Fi available.</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= BOOKING ================= -->
+
+<section class="booking" id="booking">
+
+<div class="container booking-grid">
+
+<div class="booking-text reveal">
+
+<div class="eyebrow">Reservations</div>
+
+<h2>
+Your Paris<br>
+beauty moment<br>
+starts here.
+</h2>
+
+<p>
+Appointments are required and recommended.
+Complete the form and our team will contact you
+to confirm your appointment.
+</p>
+
+</div>
+
+<div class="form reveal">
+
+<form id="bookingForm">
+
+<div class="form-grid">
+
+<input
+class="input"
+type="text"
+placeholder="Full name"
+required
+>
+
+<input
+class="input"
+type="email"
+placeholder="Email address"
+required
+>
+
+<input
+class="input"
+type="tel"
+placeholder="Phone number"
+required
+>
+
+<select class="input">
+<option>Select service</option>
+<option>Haircut & Styling</option>
+<option>Colour</option>
+<option>Balayage</option>
+<option>Hair Care</option>
+<option>Bridal Beauty</option>
+<option>SPA & Wellness</option>
+</select>
+
+<input
+class="input"
+type="date"
+required
+>
+
+<input
+class="input"
+type="time"
+required
+>
+
+<textarea
+class="input full"
+placeholder="Tell us how we can help..."
+></textarea>
+
+</div>
+
+<button class="btn" type="submit">
+Request Appointment
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+<div class="container contact-grid">
+
+<div class="reveal">
+
+<div class="section-number">06 — VISIT US</div>
+
+<h2 class="section-title">
+In The Heart<br>
+<span>Of Paris.</span>
+</h2>
+
+<p class="section-description">
+Find us in Saint-Germain-des-Prés,
+one of Paris's most iconic neighbourhoods.
+</p>
+
+<div class="contact-info">
+
+<div class="contact-line">
+<small>Address</small>
+<div>15 Rue des Saints-Pères<br>75006 Paris, France</div>
+</div>
+
+<div class="contact-line">
+<small>Telephone</small>
+<a href="tel:+33142614515">
++33 1 42 61 45 15
+</a>
+</div>
+
+<div class="contact-line">
+<small>Website</small>
+<div>coiffeur-saint-germain-des-pres-paris.fr</div>
+</div>
+
+<div class="contact-line">
+<small>Parking</small>
+<div>Paid parking garage · Paid street parking</div>
+</div>
+
+</div>
+
+</div>
+
+<div class="map reveal">
+
+<div class="map-pin">
+
+<div class="pin"></div>
+
+<div class="map-label">
+Saint-Germain-des-Prés
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+
+<div class="footer-logo">
+DESSANGE
+</div>
+
+<p class="footer-about">
+Saint-Germain-des-Prés · Paris 6.
+A destination for French hairdressing,
+colour and beauty rituals.
+</p>
+
+</div>
+
+<div class="footer-col">
+
+<h4>Explore</h4>
+
+<a href="#salon">The Salon</a>
+<a href="#services">Services</a>
+<a href="#spa">SPA</a>
+<a href="#experience">Experience</a>
+
+</div>
+
+<div class="footer-col">
+
+<h4>Contact</h4>
+
+<a href="#booking">Book Appointment</a>
+<a href="tel:+33142614515">+33 1 42 61 45 15</a>
+<a href="#contact">15 Rue des Saints-Pères</a>
+<a href="#contact">Paris 75006</a>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<span>© 2026 DESSANGE SAINT-GERMAIN-DES-PRÉS</span>
+
+<span>PARIS · FRANCE</span>
+
+</div>
+
+</footer>
+
+
+<script>
+
+/* ================= HEADER ================= */
+
+const header = document.getElementById("header");
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY > 50){
+    header.classList.add("scrolled");
+}else{
+    header.classList.remove("scrolled");
+}
+
+});
+
+
+/* ================= MOBILE MENU ================= */
+
+const menu = document.getElementById("menu");
+const navLinks = document.getElementById("navLinks");
+
+menu.addEventListener("click",()=>{
+
+navLinks.classList.toggle("active");
+
+});
+
+document.querySelectorAll(".nav-links a").forEach(link=>{
+
+link.addEventListener("click",()=>{
+    navLinks.classList.remove("active");
+});
+
+});
+
+
+/* ================= SCROLL REVEAL ================= */
+
+const reveals = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(
+
+entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("visible");
+
+}
+
+});
+
+},
+
+{
+    threshold:.12
+}
+
+);
+
+reveals.forEach(el=>observer.observe(el));
+
+
+/* ================= CUSTOM CURSOR ================= */
+
+const cursor = document.querySelector(".cursor");
+const ring = document.querySelector(".cursor-ring");
+
+document.addEventListener("mousemove",(e)=>{
+
+cursor.style.left=e.clientX+"px";
+cursor.style.top=e.clientY+"px";
+
+setTimeout(()=>{
+
+ring.style.left=e.clientX+"px";
+ring.style.top=e.clientY+"px";
+
+},60);
+
+});
+
+
+/* ================= BOOKING ================= */
+
+document.getElementById("bookingForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert(
+"Thank you for your appointment request.\n\n" +
+"Our DESSANGE Paris 6 team will contact you shortly to confirm your appointment."
+);
+
+this.reset();
+
+});
+
+
+/* ================= PARALLAX ================= */
+
+window.addEventListener("scroll",()=>{
+
+const hero = document.querySelector(".hero");
+
+let scroll = window.scrollY;
+
+if(scroll < window.innerHeight){
+
+hero.style.backgroundPosition =
+"center " + (scroll * .25) + "px";
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
